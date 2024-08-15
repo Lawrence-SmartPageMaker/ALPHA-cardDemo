@@ -10,5 +10,4 @@ how the program works.
   <li><strong>Standard Run</strong> - The demo with information in it about 20 cards in a simple quiz about animals</li>
 </ul>
 
-The comments for the current code state are meta lines in the meta lines at
-the top of the degaultAlpha file.
+The comments for the current code state are meta lines at the top of the degaultAlpha file. Some sort of user-guide is clearly a good idea!
