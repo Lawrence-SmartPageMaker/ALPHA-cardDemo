@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta Apart from some formatting there are  >
+    <meta huge areas to fix within two of the pages >
+    <meta that appear to work>
+    <meta Edit page does NOT even update or canvel data changes.>
+    <meta Select page does NOT do anything except Lock and Unlock.>
+    <meta itself>
+
+    <meta charset=" UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@400&display=swap" rel="stylesheet">
+
+    <link href="EggNlabel-Style.css" rel="stylesheet" />
+    <link href="FieldTopic.css" rel="stylesheet" />
+    <link href="EditFold-Style.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="FieldTopic.js"></script>
+    <script type="text/javascript" src="DataOpen.js"></script>
+    <script type="text/javascript" src="Structure-Edit.js"></script>
+    <script type="text/javascript" src="TopicAccept.js"></script>
+    <script type="text/javascript" src="EggNlabel-Script.js"></script>
+    <script type="text/javascript" src="EditFold-Script.js"></script>
+    <script type="text/javascript" src="LeftHand-Macro.js"></script>
+    <script type="text/javascript" src="ContentEditor.js"></script>
+
+
+    <title>TwoInwaiting-Baker</title>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+        }
+
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Rokkitt', serif;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        h2 {
+            font-size: 2.0rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 16px;
+            max-height: 710px;
+            max-width: 365px;
+            background-color: yellow;
+        }
+
+        #UserFrame {
+            display: block;
+            width: 360px;
+            height: 700px;
+        }
+
+        #workAtSelector {
+            height: 700px;
+            width: 360px;
+            padding: 5px;
+            background-color: transparent;
+            border: 2px solid red;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        header,
+        footer {
+            margin: 0;
+            padding: 0;
+            height: 70px;
+            width: 350px;
+            background-color: #ccc;
+            box-sizing: border-box;
+        }
+
+        footer {
+            font-size: 0.5em;
+            position: absolute;
+            top: 20px;
+        }
+
+        .outerArt {
+            height: 425px;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navStats {
+            width: 350px;
+            height: 90px;
+            background-color: #409240;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapBoth {
+            margin: 0;
+            padding: 0;
+            box-sizing: inline-block;
+        }
+
+        .wrapBoth>div {
+            height: calc(560px - 248px);
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+            display: inline-block;
+        }
+
+        .leftMost {
+            position: relative;
+            top: -33px;
+            width: 138px;
+            margin: 0;
+        }
+
+        .rightMost {
+            position: relative;
+            top: auto;
+            margin: 0 0 0 20px;
+            width: 186px;
+        }
+
+        .belowBoth,
+        .aboveBoth {
+            position: relative;
+            top: -8px;
+            height: 46px;
+            width: 350px;
+            background-color: orange;
+            padding: 0 5px 0 5px;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .aboveBoth {
+            height: 50px;
+            position: relative;
+            top: 0;
+        }
+
+        .belowBoth {
+            position: relative;
+            top: -70px;
+        }
+
+        #verticalNav {
+            display: inline-block;
+            background-color: #d3d3d3;
+            width: 120px;
+            /* Adjust as needed */
+            height: 200px;
+            /* Adjust as needed for scrolling */
+            overflow-y: scroll;
+            padding: 10px;
+            /* Adjust as needed */
+            text-align: center;
+        }
+
+        #copyBox,
+        #pasteBox {
+            background-color: white;
+            height: 85px;
+            width: 140px;
+            overflow-y: scroll;
+            /* vertical scrollbar */
+        }
+
+        .away {
+            display: none;
+        }
+
+        .icon {
+            font-family: 'Material Symbols Outlined';
+            font-size: 24px;
+            font-style: normal;
+            vertical-align: middle;
+            /* Adjust as needed */
+        }
+
+        header,
+        footer {
+            width: 100%;
+            height: 15%;
+            background-color: #f2f2f9;
+            position: relative;
+            padding: 4px;
+        }
+
+        #secB,
+        #secBmainSubject {
+            background-color: #c9c9f1;
+        }
+
+        footer {
+            height: 10%;
+        }
+
+        #footBtnRight {
+            margin-top: 1.2rem;
+            margin-right: 3px;
+            float: right;
+            /* This will align your buttons to the right */
+        }
+
+        #footBtnRight>button {
+            min-width: 3rem;
+            margin-left: 0.5rem;
+        }
+
+        .hamburger {
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            top: 4px;
+            right: 4px;
+        }
+
+        /* Style for the expandable menu */
+        .menu-content {
+            display: none;
+            /* Hide menu initially */
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            right: 0;
+            /* Aligns the menu to the right edge of the hamburger button */
+        }
+
+
+        /* Menu item styles */
+        .menu-content a {
+            font-size: 0.8em;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Show the menu on hover */
+        .hamburger:hover .menu-content {
+            display: block;
+        }
+
+        #navStats {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 70px;
+            background-color: #ddd;
+            display: flex;
+        }
+
+        /*- nscell means a CELL within navStatus---*/
+        .nscell {
+            flex: 1;
+            /* Distributes space evenly among nscell */
+            text-align: center;
+            /* Centers text horizontally */
+            width: 10%;
+        }
+
+        .nsBlank {
+            flex: 1;
+            /* Distributes space evenly among nscell */
+            text-align: center;
+            /* Centers text horizontally */
+        }
+
+        .nscell h4,
+        .nscell input,
+        .nscell button {
+            margin: 0;
+            width: 60%;
+            /* Take up some width of parent */
+        }
+
+        .nscell button {
+            margin-top: 4px;
+            border-radius: 2rem;
+        }
+
+        footer button {
+            margin-top: 4px;
+            border-radius: 2rem;
+        }
+
+        #workAtSelector {
+            padding: 4px;
+            width: 100%;
+            height: 70%;
+            background-color: #c9c9f1;
+        }
+    </style>
+    <script>
+
+        // Global Variables == BEGIN
+
+        var globalSystemState = "";
+
+        var rowdata = {};
+        var preset = [];
+        var postset = [];
+
+        var gblActiveTab;
+        var titlespreset = ["card-ID", "Running-SortNumber", "Prompt", "Clue", "Content"]; // 
+        var titlespostset = [];
+        var titles = [...titlespreset]; // Create a shallow copy of titlespreset
+
+        var gobjDataStructure = {};
+
+        // Global Variables == END
+
+        function handleTopicChange() {
+            const selectElement = document.getElementById('topic-select');
+            const selectedValue = selectElement.value;
+            toggleSection(selectedValue);
+        }
+
+        function toggleSection(selectedValue) {
+            const sections = document.querySelectorAll('.away');
+            sections.forEach(section => {
+                section.style.display = "none"; // Hide all sections
+            });
+
+            const sectionToShow = document.getElementById(selectedValue);
+            if (sectionToShow) {
+                sectionToShow.style.display = "block"; // Display the selected section
+                gblActiveTab = selectedValue;
+                tryToRefresh();
+            } else {
+                alert('Sorry we dont have :' + selectedValue);
+            }
+        }
+        // Formally tryToRefresh
+
+
+    </script>
+</head>
+
+<body onload="GeneralInit()">
+    <section id="UserFrame">
+        <header id="TopStrip">
+            <select name="topics" id="topic-select" onchange="handleTopicChange()">
+                <option value="secNone">
+                    --Choose a Topic--
+                </option>
+                <option value="secA">Table</option>
+                <option value="secB">Select</option>
+                <option value="secC">Edit</option>
+                <option value="secD">Field</option>
+                <option value="secE">Hardwire</option>
+                <option value="secF">Transfer</option>
+            </select>
+            <h3>First Topic then Menu</h3>
+
+            <div class="hamburger"><i class="icon">menu</i>
+                <div class="menu-content">
+                    <a href="#" id="ecopy">
+                        <i class="icon">
+                            content_copy
+                        </i> Copy row
+                    </a>
+                    <a href="#" id="epaste">
+                        <i class="icon">
+                            content_paste
+                        </i> Paste row
+                    </a>
+                    <a href="#" id="mcopy">
+                        <i class="icon">
+                            auto_awesome_motion
+                        </i> M. Copy
+                    </a>
+                    <a href="#" id="mpaste">
+                        <i class="icon">
+                            content_paste_go
+                        </i> M. Paste
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <section id="All-The-Others" name="All-The-Others">
+
+            <section id="secB" name="secB" class="away">
+                <article class="outerArt">
+                    <form id="navStats" name="navStats">
+                        <div class="nscell">
+                            Source Def
+                            <input id="navTboSource" name="navTboSource" value="0"></input>
+                            <button>Details</button>
+                        </div>
+                        <div class="nscell">
+                            Dest Def
+                            <input id="navTboDest" name="navTboDest" value="0"></input>
+                            <button>Details</button>
+                        </div>
+                    </form>
+
+                    <div id="secBmainSubject" name="secBmainSubject" value="Main Subject of secB">
+
+                    </div>
+
+                    <div class="wrapBoth">
+                        <div class="leftMost">
+
+                            <div id="verticalNav">
+                                Content for left-most div
+                                <span onclick="LeadCol(this)"> 050 , a50 </span><br>
+                                <!-- JUST FOR NOW!! <span onclick="LeadCol(this)"> 050 , a50 </span><br> -->
+                            </div>
+                        </div>
+
+                        <div class="rightMost">
+                            <h3></h3>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <table style="width: 220px;background-color: green;">
+                                            <tr>
+                                                <td>Source</td>
+                                                <td style="width: 97px;">
+                                                    <button>+ Add</button>
+                                                </td>
+                                                <td style="width: 97px;">
+                                                    <button>- Remove</button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <textarea id="copyBox" name="copyBox">
+                                            0
+                                        </textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table style="width: 200px;background-color: green;">
+                                            <tr>
+                                                <td>Dest</td>
+                                                <td style="width: 97px;">
+                                                    <button>+ Add</button>
+                                                </td>
+                                                <td style="width: 97px;">
+                                                    <button>- Remove</button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <textarea id="pasteBox" name="pasteBox">
+                                            0
+                                        </textarea>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="belowBoth">
+                        <div value="WrapBelowPrefix" style="display: inline-block;">
+                            <label>M-Selection </label>
+                            <label class="switch">
+                                <input type="checkbox" id="toggleSwitch" onchange="updateStatus(this)">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div id="status" value="WrapBelowSuffix" style="display: inline-block;
+                                 position:relative; 
+                                 top:+19px; left:+4px;">
+                            <span>Unlocked for editing</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section id="secC" name="secC" class="away" style="background-color: #c9c9f1; ;">
+                <article class="outerArt">
+                    <form id="subMenu" name="subMenu">
+                        <!-- Sub Menu Contents fit into HERE -->
+                    </form>
+                    <div id="LocalToolBar" name="LocalToolBar" style="height:20px">
+                        <button onclick="EditSecDownTheList()" id="EditDownButton">
+                            PgDn
+                        </button>
+                        <button onclick="EditSecUpTheList()" id="EditUpButton">
+                            PgUp
+                        </button>
+
+                        <span> || </span>
+
+                        <button id="widthToggle" onclick="toggleFoldablePanel()">
+                            {{ Width }}
+                        </button>
+                        <button id="Development" onclick="whereAreWeNow()">
+                            Dvlp
+                        </button>
+
+                        <span> || </span>
+
+                        <button id="demoOf-RHS" onclick="demoOfRHS()">
+                            RHSegment
+                        </button>
+
+                    </div>
+                    <div name="panel-LR" id="panel-LR" class="panel-LR-container ">
+                        <div name="LeftPanel" id="LeftPanel" class="left-panel">
+                            <div id="FieldLeadColumn" name="FieldLeadColumn">
+                                <!-- Content for field lead column -->
+                            </div>
+                        </div>
+                        <div id="RightPanel" class="right-panel">
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+
+            <section id="secD" name="secD" class="away" style="max-height:394px;">
+                <div id="secD-Hold em Apart" style="background-color: aqua;height:55px; position:relative; top:0;">
+                    <button id="addingButton" onclick="setAsAddSort('ADDING')">Adding</button>
+                    <span> || </span>
+                    <button id="sortingButton" onclick="setAsAddSort('SORTING')">Sorting</button>
+                    <span> || </span>
+                    <button id="renumButton" onclick="renumInPlace()">
+                        RENUM in PLACE</button>
+                    <!--
+                    <span> || </span>
+                    <button id="extendButton" onclick="tryToRefresh()">Experiment</button>
+                -->
+
+                </div>
+                <div id="fieldPerformOption" style="height:250px; position:relative; top:16px;">
+
+
+
+                    <form id="addFieldForm" name="addFieldForm" display="block" style="position:relative;top:-14px;">
+                        <label for="title">Field Title:</label>
+                        <input type="text" id="title" name="title" required><br>
+                        <label for="defaultValue">Def. Value:</label>
+                        <input type="text" id="defaultValue" name="defaultValue" required>
+                        <button type="submit">Add Field</button>
+                    </form>
+
+                    <table id="addedFields" style="display:table;">
+                        <!-- should be  display:table-->
+                        <tr>
+                            <th>Title</th>
+                            <th>Value</th>
+                        </tr>
+                        <!-- Existing fields will be listed here -->
+                    </table>
+
+                    <div id="decidePriotityDown" style="display: none;">
+                        <h2>Sorting the Runner</h2>
+                        <label for="dropdown1">Priority 1:</label>
+                        <select id="dropdown1">
+
+                        </select><br>
+
+                        <label for="dropdown2">Priority 2:</label>
+                        <select id="dropdown2">
+
+                        </select><br>
+
+                        <label for="dropdown3">Priority 3:</label>
+                        <select id="dropdown3">
+
+                        </select><br>
+                        <nr></nr>
+
+                        <button onclick="redrawUpdate()">Redraw</button </div>
+
+
+                        <div id="ShowRunningPriotity" name="stand in the three dropdowns" style="display: none;">
+                            </h3>stand in for the priority table</h3>
+                        </div>
+
+
+                    </div>
+            </section>
+
+
+
+            <section id="secE" name="secE" class="away">
+                <div id="secE-Hold em Apart" style="background-color: aqua;height:430px;">
+                    <div id="SmallToolBar" name="SmallToolBar" style="height:20px">
+                        <button onclick="smallBar('tiny')" id="tiny">
+                            Tiny
+                        </button>
+
+                        <button onclick="smallBar('mix')" id="mix">
+                            Mixed Demo
+                        </button>
+
+                        <span> || </span>
+
+                        <button onclick="smallBar('stand')" id="stand">
+                            Standard Run
+                        </button>
+
+                        <button onclick="smallBar('electro')" id="amps">
+                            Electro
+                        </button>
+
+                    </div>
+                    <p>
+                        The three choices will appear Here
+                    </p>
+                </div>
+
+            </section>
+
+
+
+        </section>
+
+        <footer>
+            <div id="footBtnRight">
+
+                <button style="margin-right: 2rem;">
+                    <i class="icon">
+                        restart_alt
+                    </i> Reset
+                </button>
+
+                <button><strong>
+                        <i class="icon">
+                            done
+                        </i>OK
+                    </strong>
+                </button>
+
+                <button>
+                    <span style="opacity: 0.5;">
+                        <i class="icon">
+                            close
+                        </i> Esc</span>
+                </button>
+
+            </div>
+        </footer>
+    </section>
+
+    <section id="secA" name="secA" class="away">
+        <article class="outerArt">
+        </article>
+    </section>
+
+
+
+
+
+
+
+    <section id="secF" name="secF" class="away">
+        <article class="outerArt">
+        </article>
+    </section>
+
+    <section id="Ahide" class="away">AWAY hiden unless Debugging
+        <ul id="HoldsRowContent">
+        </ul>
+
+        <ul id="HoldsColumnStructure">
+        </ul>
+    </section>
+    </section>
+</body>
+
+</html>

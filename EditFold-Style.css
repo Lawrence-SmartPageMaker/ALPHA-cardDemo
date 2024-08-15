@@ -1,0 +1,61 @@
+.tdlabel {
+    max-width: 45px;
+
+}
+
+.tdValueWithin {
+    width: 94%;
+}
+
+.tdValueBelow {
+    y max-width: 100%;
+    margin-right: 5px;
+}
+
+.left-panel,
+.right-panel {
+    position: absolute;
+}
+
+
+#LeftPanel {
+    position: absolute;
+    width: 136px;
+    background-color: #FF8040;
+    max-height: 160px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#FieldLeadColumn {
+    max-height: 160px;
+    width: 100%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#RightPanel {
+    max-height: 438px; // to look like 413
+    width: 343px; // to look like 324
+    background-color: #25FF25;
+    overflow-y: auto; // only when needed
+    transform: scale(0.91);
+    /* Scale down by more than 5% */
+    transform-origin: top left;
+    /* Ensure scaling starts from the top left */
+}
+
+#PseudoHeader {
+    display: block;
+    background-color: orangered;
+    width: 360px;
+    height: 40px;
+
+}
+
+#panel-LR {
+    display: block;
+    width: 360px;
+    height: 400px;
+}
